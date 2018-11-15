@@ -5,15 +5,18 @@
     <AspNetCoreHostingModel>inprocess</AspNetCoreHostingModel>
     <!-- aspnet/BuildTools#662 Don't police what version of NetCoreApp we use -->
     <NETCoreAppMaximumVersion>99.9</NETCoreAppMaximumVersion>
-    <BundledAspNetCoreAppTargetFrameworkVersion>3.0</BundledAspNetCoreAppTargetFrameworkVersion>
-    <BundledAspNetCoreAppPackageVersion>3.0.0-alpha1-10653</BundledAspNetCoreAppPackageVersion>
-    <RuntimeFrameworkVersion>3.0.0-preview1-26907-05</RuntimeFrameworkVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <KnownFrameworkReference Update="Microsoft.AspNetCore.App"
+      DefaultRuntimeFrameworkVersion="3.0.0-alpha1-10727"
+      LatestRuntimeFrameworkVersion="3.0.0-alpha1-10727"
+      TargetingPackVersion="3.0.0-alpha1-10727" />
+  </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="3.0.0-alpha1-10653" PrivateAssets="All" />
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.0.0-preview-181109-02" />
   </ItemGroup>
 
 </Project>
